@@ -19,8 +19,7 @@ public class Department {
     @OneToMany(mappedBy = "department")
     private List<Employee> employees;
 
-    public Department(Long id, String name) {
-        this.id = id;
+    public Department(String name) {
         this.name = name;
         this.employees = new ArrayList<Employee>();
     }
