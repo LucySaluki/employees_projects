@@ -15,8 +15,8 @@ public class Department {
     @Column(name="name")
     private String name;
 
-    @JsonIgnoreProperties({"departments"})
-    @OneToMany(mappedBy = "department")
+    @JsonIgnoreProperties({"department"})
+    @OneToMany(mappedBy = "department", fetch = FetchType.LAZY)
     private List<Employee> employees;
 
     public Department(String name) {
